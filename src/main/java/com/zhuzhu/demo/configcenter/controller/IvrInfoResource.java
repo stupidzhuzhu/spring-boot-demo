@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.Set;
 
 @RestController
 @RequestMapping("/callcenter/api/rest/internal/v1/configcenter/")
@@ -37,8 +38,8 @@ public class IvrInfoResource {
     }
 
     @RequestMapping(value = "getIvrInfo", method = RequestMethod.GET)
-    public IvrPO getIvrInfo(Integer id) {
-        return ivrInfoService.getIvrInfo(id);
+    public Set<IvrPO> getIvrInfo() {
+        return ivrInfoService.getAllIvrInfo();
     }
 
 }

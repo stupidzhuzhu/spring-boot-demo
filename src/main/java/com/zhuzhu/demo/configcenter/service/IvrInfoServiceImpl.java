@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.Set;
 
 @Service
 public class IvrInfoServiceImpl implements IvrInfoService {
@@ -75,5 +76,10 @@ public class IvrInfoServiceImpl implements IvrInfoService {
             LOGGER.error("[DAO] get ivr info failed, id:" + id, e);
         }
         return ivrInfo;
+    }
+
+    @Override
+    public Set<IvrPO> getAllIvrInfo() {
+        return ivrInfoDAO.getAllNemoNumber();
     }
 }

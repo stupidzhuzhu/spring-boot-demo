@@ -2,6 +2,8 @@ package com.zhuzhu.demo.configcenter.interfaces;
 
 import com.zhuzhu.demo.configcenter.pojo.IvrPO;
 
+import java.util.Set;
+
 public interface IvrInfoService {
 
     void addIvrInfo(IvrPO ivrPO);
@@ -13,5 +15,7 @@ public interface IvrInfoService {
     void updateIvrInfo(IvrPO ivrPO);
 
     IvrPO getIvrInfo(Integer id);
+
+    Set<IvrPO> getAllIvrInfo();
 
 }

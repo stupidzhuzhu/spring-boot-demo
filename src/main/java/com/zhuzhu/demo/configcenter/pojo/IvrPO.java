@@ -1,9 +1,7 @@
 package com.zhuzhu.demo.configcenter.pojo;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Entity
 @Table(name = "libra_ivr_resource")
